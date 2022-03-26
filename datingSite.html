@@ -8,29 +8,35 @@
   </head>
   <body>
     <h1>Enter Your Details for our Dating Website</h1>
-    <form>
+    <form action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata"
+          method="post"
+          enctype="multipart/form-data">
       <fieldset>
         <legend>Your Face</legend>
-        <label for="upload-your-image:">Upload Your Image</label>
-        <input type="file" id="myFile" name="filename" />
-        <br />
-        <label for="image-preview">Image Preview:</label>
+        <div>
+            <label for="avatar">Upload Your Image</label>
+            <input type="file" id="avatar" name="avatar" required />
+        </div>
+        <p name="image-preview">Image Preview:</label>
+        <img id="preview" width="500" />
       </fieldset>
       <fieldset>
         <legend>Your Details</legend>
         <label for="name">Name:</label>
-        <input type="text" name="name" />
+        <input type="text" name="name" placeholder="Your Full Name" />
         <div>
           <label for="name">Gender:</label>
-          Male <input type="radio" name="gender" value="male" required /> Female
-          <input type="radio" name="gender" value="female" required />
+          <input type="radio" name="gender" value="woman" required /> 
+          Woman
+          <input type="radio" name="gender" value="man" required /> 
+          Man
         </div>
         <div>
           <label for="age">Age:</label>
           <input type="text" name="age" />
         </div>
         <div>
-          <label for="dob">Date of Birth</label>
+          <label for="dob">Date of Birth:</label>
           <input type="text" name="age" placeholder="mm/dd/yyyy" />
         </div>
         <div>
@@ -39,8 +45,8 @@
         </div>
         <div>
           <label for="country">Country:</label>
-          <select name="country">
-            <option>Select a Country</option>
+          <select id="country" name="country">
+            <option>Choose a country</option>
             <option value="brazil">Brazil</option>
             <option value="france">France</option>
             <option value="japan">Japan</option>
@@ -48,9 +54,38 @@
             <option value="usa">USA</option>
           </select>
         </div>
+        <div>
+          Salary:
+          <label for="salary">
+              <span class="range-caption">Poor</span>
+          </label>
+          <input type="range" id="salary" name="salary" min="0" max="100" value="50" />
+          <span class=range_caption>Rich</span>
+        </div>
       </fieldset>
-      <input type="text" />
-      <input type="submit" value="Go" />
+      <fieldset>
+        <legend>Your Contact Information</legend>
+        <div>
+          <label for="email">Email:</label>
+          <input type="text" name="email" />
+        </div>
+        <div>
+          <label for="phone">Phone:</label>
+          <input type="text" name="phone" />
+        </div>
+        <div>
+          <label for="address">Address:</label>
+          <textarea name="address"></textarea>
+        </div>
+        <div>
+          <label for="address">Contact method(s):</label>
+          <input type="checkbox" name="email" value="email" />
+          Email 
+          <input type="checkbox" name="phone" value="phone" />
+          Phone
+        </div>
+      </fieldset>
+      <input type="submit" value="Submit" />
     </form>
   </body>
 </html>
