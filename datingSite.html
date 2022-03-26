@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dating Site</title>
+  </head>
+  <body>
+    <h1>Enter Your Details for our Dating Website</h1>
+    <form>
+      <fieldset>
+        <legend>Your Face</legend>
+        <label for="upload-your-image:">Upload Your Image</label>
+        <input type="file" id="myFile" name="filename" />
+        <br />
+        <label for="image-preview">Image Preview:</label>
+      </fieldset>
+      <fieldset>
+        <legend>Your Details</legend>
+        <label for="name">Name:</label>
+        <input type="text" name="name" />
+        <div>
+          <label for="name">Gender:</label>
+          Male <input type="radio" name="gender" value="male" required /> Female
+          <input type="radio" name="gender" value="female" required />
+        </div>
+        <div>
+          <label for="age">Age:</label>
+          <input type="text" name="age" />
+        </div>
+        <div>
+          <label for="dob">Date of Birth</label>
+          <input type="text" name="age" placeholder="mm/dd/yyyy" />
+        </div>
+        <div>
+          <label for="color">Favorite Color:</label>
+          <input type="color" name="color" />
+        </div>
+        <div>
+          <label for="country">Country:</label>
+          <select name="country">
+            <option>Select a Country</option>
+            <option value="brazil">Brazil</option>
+            <option value="france">France</option>
+            <option value="japan">Japan</option>
+            <option value="libya">Libya</option>
+            <option value="usa">USA</option>
+          </select>
+        </div>
+      </fieldset>
+      <input type="text" />
+      <input type="submit" value="Go" />
+    </form>
+  </body>
+</html>
