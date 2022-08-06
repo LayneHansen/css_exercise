@@ -67,13 +67,14 @@
             <label for="avatar">Upload Your Image</label>
             <input type="file" id="avatar" name="avatar" required />
         </div>
-        <p name="image-preview">Image Preview:</label>
+        <p name="image-preview">Image Preview:</p>
         <img id="preview" width="500" />
       </fieldset>
       <fieldset>
         <legend>Your Details</legend>
         <label for="name">Name:</label>
         <input type="text" name="name" placeholder="Your Full Name" />
+        
         <div>
           <label for="name">Gender:</label>
           <input type="radio" name="gender" value="woman" required /> 
@@ -81,10 +82,12 @@
           <input type="radio" name="gender" value="man" required /> 
           Man
         </div>
+        
         <div>
           <label for="age">Age:</label>
           <input type="text" name="age" />
         </div>
+        
         <div>
           <label for="dob">Date of Birth:</label>
           <input type="text" name="age" placeholder="mm/dd/yyyy" />
@@ -96,7 +99,7 @@
         <div>
           <label for="country">Country:</label>
           <select id="country" name="country">
-            <option>Choose a country</option>
+            <option disabled selected>Choose a country</option>
             <option value="brazil">Brazil</option>
             <option value="france">France</option>
             <option value="japan">Japan</option>
@@ -105,10 +108,8 @@
           </select>
         </div>
         <div>
-          Salary:
-          <label for="salary">
-            <span class="range-caption">Poor</span>
-          </label>
+          <label for="salary">Salary:</label>
+          <span class="range-caption">Poor</span>
           <input type="range" id="salary" name="salary" min="0" max="100" value="50" />
             <span class="range-caption">Rich</span>
         </div>
