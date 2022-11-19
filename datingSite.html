@@ -47,10 +47,8 @@
 
     input[type="radio"]+label,
     input[type="checkbox"]+label {
-        width: auto
+        width: auto;
     }
-
-    ;
 
     input[type="range"] {
         width: 20%
@@ -63,14 +61,14 @@
         text-align: center;
     }
 
-    input[type="sumbit"] {
+    input[type="submit"] {
         background: darkcyan;
         border-radius: 10px;
         color: white;
         font-size: 20px;
         padding: 12px;
-
     }
+
 </style>
 
 <body>
@@ -90,7 +88,7 @@
         <fieldset>
             <legend> Your Details</legend>
             <div>
-                <label> Gender; </label>
+                <label> Gender: </label>
                 <input type="radio" id="woman" name="gender" value="woman" required>
                 <label for="woman">Woman</label>
                 <input type="radio" id="man" name="gender" value="man">
@@ -110,8 +108,8 @@
                     <option value="brazil">Brazil</option>
                     <option value="france">France</option>
                     <option value="japan"> Japan</option>
-                    <option value="libya">libya</option>
-                    <option value="usa">U.S.a</option>
+                    <option value="libya">Libya</option>
+                    <option value="usa">U.S.A.</option>
                 </select>
             </div>
             <div>
@@ -136,12 +134,15 @@
 
             <div>
                 <label for="address">Address: </label>
-                <texarea name="address" id="address" cols="40"></texarea>
+                <textarea name="address" id="address" cols="40"></textarea>
             </div>
+
             <div>
-                <label> Contact method(s):</label>
-                <input type="checkbox" name="contact" id="emailCheckbox"> <label for="emailCheckbox">Email</label>
-                <input type="checkbox" name="contact" id="phoneCheckbox"> <label for="phoneCheckbox"> Phone</label>
+                <label>Contact method(s):</label>
+                <input type="checkbox" name="contact" id="emailCheckbox" value="email"> 
+                <label for="emailCheckbox">Email</label>
+                <input type="checkbox" name="contact" id="phoneCheckbox" value="phone"> 
+                <label for="phoneCheckbox">Phone</label>
             </div>
 
         </fieldset>
@@ -150,6 +151,7 @@
             <input type="submit" />
         </div>
     </form>
+    <script src="https://url.nucamp.co/datingjs"></script>
 </body>
 
 </html>
